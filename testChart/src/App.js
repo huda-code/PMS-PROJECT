@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Chart from './Charts'
+import Charts from './components/Chart.js'
 
 
 
@@ -9,7 +9,7 @@ function App() {
   
   return (
     <div className="App">
-    <Chart />
+    <Charts />
     </div>
   );
 }
