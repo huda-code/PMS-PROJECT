@@ -1,11 +1,11 @@
-const express = require("express");
-const { google } = require("googleapis");
+import express from "express";
+import {google} from "googleapis";
 
 const app = express();
 // app.set("view engine", "ejs");
 // app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
+app.get("/progress", (req, res) => {
   res.send ("Port is working")
 });
 
@@ -52,3 +52,5 @@ app.get("/sheet", async (req, res) => {
 });
 
 app.listen(1337, (req, res) => console.log("running on 1337"));
+
+export default app;

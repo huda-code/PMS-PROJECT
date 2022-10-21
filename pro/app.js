@@ -5,7 +5,7 @@ import {google} from "googleapis"
 //apiRouter is the alias of the router
 let PORT = config.get('PORT')
 import apiRouter from "./controllers/api/index.js";
-
+import apiApp from "./controllers/sheet/index.js";
 
 
 import "./dbConnect.js";
@@ -24,39 +24,8 @@ app.get("/", (req, res) => {
 })
 
 app.use("/progress", apiRouter);
+
 // ................................................
-
-app.get("/sheet", async (req, res) => {
-
-  const auth = new google.auth.GoogleAuth({
-    keyFile: "./utils/credentials.json",
-    scopes: "https://www.googleapis.com/auth/spreadsheets",
-  });
-
-  // Create client instance for auth
-  const client = await auth.getClient();
-
-  // Instance of Google Sheets API
-  const googleSheets = google.sheets({ version: "v4", auth: client });
-
-  const spreadsheetId = "1-R2QwFfIXMA4CpNOYkiNLlTT_h0FDURVS5KKq9xeWrQ";
-
-
-  const getAll = await googleSheets.spreadsheets.values.get({
-    auth,
-    spreadsheetId,
-    range: "Sheet1!A1:F",
-  });
-
-  console.log(getAll.data.values)
-  // let yvalues = (getRows.data.values).flat();
-  // console.log(getRows2.data.values);
-
-
-  res.status(200).json({"data":getAll.data.values});
-});
-
-app.listen(PORT, (req, res) => console.log(`running on ${PORT} `));
 
 
 

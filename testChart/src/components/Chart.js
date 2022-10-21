@@ -17,7 +17,7 @@ function Charts(){
         console.log(res.data.data)
 
         var xValues = res.data.data.map(ele=>ele[0]);
-        xValues.splice(0,1);
+        // xValues.splice(0,1);
         console.log("xvalues",xValues);
         var yValues = res.data.data.map(ele=> (ele[1]))
         // yValues.splice(0,1);

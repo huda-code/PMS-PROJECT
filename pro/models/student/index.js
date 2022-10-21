@@ -1,12 +1,7 @@
 import mongoose from "mongoose";
 
-//This is Main User Schema
-// this is only for changes. 
+
 const StudentSchema = new mongoose.Schema({
-    usertype: {
-        type: String,
-        default: "user" //This assigns default value user
-    },
     firstname: {
         type: String,
         maxlength: 25,
@@ -24,7 +19,7 @@ const StudentSchema = new mongoose.Schema({
         unique: true,
         required: true
     },
-    Phone: {
+    phone: {
         type: String,
         default: false
     },
@@ -32,12 +27,11 @@ const StudentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    
     address: {
         type: String,
         maxlength: 500
     },
-    SchoolName: {
+    schoolname: {
         type: String,
         maxlength: 500
     },
@@ -46,7 +40,7 @@ const StudentSchema = new mongoose.Schema({
             type: Boolean,
             default: false
         },
-        Phone: {
+        phone: {
             type: String,
             default: false
         }
@@ -68,4 +62,4 @@ const StudentSchema = new mongoose.Schema({
     }
 });
 
-export default mongoose.model("Student", StudentSchema, "Student");
+export default mongoose.model("Student", StudentSchema, "student");

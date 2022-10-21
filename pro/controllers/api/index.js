@@ -34,13 +34,13 @@ router.post( '/signup',registerValidation(), errorMiddleware,async (req, res) =>
             }
 
             //if phone number already exist in db
-            let phoneFound = await StudentModel.findOne({ Phone: Phone });
-            // console.log(phoneFound,"on line 81")
-            if (phoneFound) {
-                return res
-                    .status(409)
-                    .json({ error: 'User Phone Already Registered. Please Login.' });
-            }
+            // let phoneFound = await StudentModel.findOne({ Phone: Phone });
+            // // console.log(phoneFound,"on line 81")
+            // if (phoneFound) {
+            //     return res
+            //         .status(409)
+            //         .json({ error: 'User Phone Already Registered. Please Login.' });
+            // }
 
             //Hashing the password
             password = await bcrypt.hash(password, 12); //applying 12 rounds of salt
