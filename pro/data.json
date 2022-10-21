@@ -1,0 +1,24 @@
+[
+    {
+        "Student_id": "VpXwINoXHbki",
+        "firstname": "Huda",
+        "lastname": "Hajira",
+        "email": "hudahajira74@gmail.com",
+        "password": "$2b$12$.XJYUicbTS6Z4EWf2JZoZuMJDhQpLDalICGPGSr6vPPZoN2o75tE.",
+        "address": "Hyderabad",
+        "Phone": "+91970334849",
+        "SchoolName": "GMS",
+        "progress": []
+    },
+    {
+        "Student_id": "gxXL1uy5z2I2",
+        "firstname": "Huda",
+        "lastname": "Hajira",
+        "email": "hudahajira74@gmil.com",
+        "password": "$2b$12$ShTIyjsSBvEKkqSYDIVeBOEBDjWOGZpylmvtfX.FpLCKeUfV7T10C",
+        "address": "Hyderabad",
+        "Phone": "+9197334849",
+        "SchoolName": "GMS",
+        "progress": []
+    }
+]
