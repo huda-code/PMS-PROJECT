@@ -14,14 +14,14 @@ function Charts(){
       try {
         setLoading(true)
         let res = await axios.get(`/sheet`)
-        console.log(res.data)
+        console.log(res.data.data)
 
         var xValues = res.data.data.map(ele=>ele[0]);
         xValues.splice(0,1);
         console.log("xvalues",xValues);
         var yValues = res.data.data.map(ele=> (ele[1]))
-        yValues.splice(0,1);
-        console.log("vvalues",yValues);
+        // yValues.splice(0,1);
+        console.log("yvalues",yValues);
         
         setUserData({
           labels: xValues,
